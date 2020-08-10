@@ -38,6 +38,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 COPY conf/nginx.conf /etc/nginx/sites-enabled/default
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY conf/php-fpm-www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY conf/php-fpm-docker.conf /usr/local/etc/php-fpm.d/docker.conf
 
 WORKDIR /app
 
